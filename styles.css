@@ -1,0 +1,182 @@
+/* Reset e configurações gerais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Cabeçalho */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #0077cc;
+}
+
+header p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Formulário */
+.formulario-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+.formulario-container h2 {
+  margin-bottom: 15px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+form button {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #005fa3;
+}
+
+/* Lista de Pacientes */
+.pacientes-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.pacientes-container h2 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+#lista-pacientes {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Card de paciente */
+.card-paciente {
+  background-color: #fff;
+  padding: 15px;
+  border-left: 6px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.card-info {
+  flex: 1;
+  min-width: 250px;
+}
+
+.card-info p {
+  margin: 5px 0;
+}
+
+.card-botoes {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.card-botoes button {
+  padding: 8px 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+/* Cores por status */
+.status-aguardando {
+  border-left-color: #0077cc;
+}
+
+.status-em-atendimento {
+  border-left-color: #ffcc00;
+}
+
+.status-finalizado {
+  border-left-color: #28a745;
+}
+
+/* Botões de ação */
+.btn-status {
+  background-color: #ffc107;
+  color: #000;
+}
+
+.btn-excluir {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .card-paciente {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .card-botoes {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  form input,
+  form button {
+    width: 100%;
+  }
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #888;
+}
